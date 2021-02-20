@@ -252,8 +252,8 @@ class Semeval2017(Dataset):
         for filename in file_list:
             if not filename.endswith(".ann"):
                 continue
-            file_anno = open(os.path.join("%s/%s" % (self.path, folder), filename), "rU")
-            file_text = open(os.path.join("%s/%s" % (self.path, folder), filename.replace(".ann", ".txt")), "rU")
+            file_anno = open(os.path.join("%s/%s" % (self.path, folder), filename), "rU", encoding="utf8")
+            file_text = open(os.path.join("%s/%s" % (self.path, folder), filename.replace(".ann", ".txt")), "rU", encoding="utf8")
             doc_id = filename[:filename.find('.')]
 
             answers[doc_id] = []
@@ -403,7 +403,7 @@ class Semeval2010(Dataset):
 
         for doc in os.listdir("%s/%s" % (self.path, folder)):
             if doc.endswith(".txt.final"):
-                content = open(("%s/%s/%s" % (self.path, folder, doc)), "r").read()
+                content = open(("%s/%s/%s" % (self.path, folder, doc)), "r", encoding="utf8").read()
                 documents[doc[:doc.find('.')]] = content
 
         return documents

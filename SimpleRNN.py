@@ -58,7 +58,7 @@ SHOW_PLOTS = False
 
 # Dataset and hyperparameters for each dataset
 
-DATASET = Semeval2017
+DATASET = Semeval2010
 
 if DATASET == Semeval2017:
     tokenizer = tk.tokenizers.nltk
