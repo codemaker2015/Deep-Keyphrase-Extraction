@@ -48,3 +48,9 @@ After running your experiments, you should exit the virtual environment by runni
 ```
 > source deactivate
 ```
+
+## Glove files
+
+https://raw.githubusercontent.com/kmr0877/IMDB-Sentiment-Classification-CBOW-Model/master/glove.6B.50d.txt.gz
+
+https://www.kaggle.com/thanakomsn/glove6b300dtxt/download
