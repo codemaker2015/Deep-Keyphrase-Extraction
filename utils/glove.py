@@ -5,12 +5,11 @@ import logging
 
 def load_glove(glove_dir,size):
     embeddings_index = {}
-    glove_path = ('glove.6B.%sd.txt' % size)
+    glove_path = os.path.join(os.getcwd(), os.path.dirname(__file__)) + ('\glove.6B.%sd.txt' % size)
 
     logging.debug("Loading GloVe pre-trained embeddings from %s" % glove_path)
-
-    print("path" + glove_path + " " + glove_dir)
-    f = open(os.path.join(glove_dir, glove_path))
+    
+    f = open(os.path.join(glove_dir, glove_path), encoding="utf8")
     for line in f:
         values = line.split()
         word = values[0]

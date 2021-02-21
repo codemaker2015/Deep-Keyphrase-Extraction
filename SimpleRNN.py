@@ -37,6 +37,7 @@ from utils import info, preprocessing, postprocessing, plots
 
 import nltk
 nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 # LOGGING CONFIGURATION
 
@@ -58,7 +59,7 @@ SHOW_PLOTS = False
 
 # Dataset and hyperparameters for each dataset
 
-DATASET = Semeval2010
+DATASET = Hulth
 
 if DATASET == Semeval2017:
     tokenizer = tk.tokenizers.nltk

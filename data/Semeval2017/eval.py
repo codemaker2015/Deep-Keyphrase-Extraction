@@ -31,9 +31,9 @@ def calculateMeasures(folder_gold="data/dev/", folder_pred="data_pred/dev/", rem
         # ignoring non-.ann files, should there be any
         if not str(f).endswith(".ann"):
             continue
-        f_gold = open(os.path.join(folder_gold, f), "r")
+        f_gold = open(os.path.join(folder_gold, f), "r", encoding="utf8")
         try:
-            f_pred = open(os.path.join(folder_pred, f), "r")
+            f_pred = open(os.path.join(folder_pred, f), "r", encoding="utf8")
             res_full_pred, res_pred, spans_pred, rels_pred = normaliseAnnotations(f_pred, remove_anno)
         except IOError:
             print(f + " file missing in " + folder_pred + ". Assuming no predictions are available for this file.")
